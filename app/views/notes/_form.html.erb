@@ -25,6 +25,11 @@
     <%= form.label :course_id %>
     <%= form.collection_select :course_id, Course.order(:name), :id, :name %>
   </div>
+  
+  <div class="field">
+    <%= form.label :note_files %>
+    <%= form.file_field :note_files, multiple: true, direct_upload: true %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
