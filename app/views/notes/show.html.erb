@@ -12,7 +12,7 @@
 
 <p>
   <strong>Course:</strong>
-  <%= @note.course %>
+  <%=link_to @note.course.name, course_path(@note.course) %>
 </p>
 
 <%= link_to 'Edit', edit_note_path(@note) %> |
