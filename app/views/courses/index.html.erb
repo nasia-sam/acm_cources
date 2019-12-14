@@ -15,7 +15,7 @@
 
   <tbody>
     <% @courses.each do |course| %>
-      <tr style="background-color:#{course.color}">
+      <tr style="background-color: <%= course.color%> ">
         <td><%= course.name %></td>
         <td><%= course.description %></td>
         <td><%= course.semester %></td>
