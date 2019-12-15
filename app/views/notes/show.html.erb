@@ -15,5 +15,15 @@
   <%=link_to @note.course.name, course_path(@note.course) %>
 </p>
 
+<p>
+    <ul>
+      <% @note.note_files.each do |file| %>
+    <li>
+      <%= link_to @note.title, rails_blob_path(file, disposition: 'preview') %>
+    </li>
+  <% end %>
+</ul>
+</p>
+
 <%= link_to 'Edit', edit_note_path(@note) %> |
 <%= link_to 'Back', notes_path %>
